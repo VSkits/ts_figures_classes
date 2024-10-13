@@ -16,7 +16,8 @@ export class Triangle implements Figure {
     const sides = [a, b, c].sort((x, y) => x - y);
 
     if (sides[2] >= sides[0] + sides[1]) {
-      const message = 'In a triangle, the sum of lengths of any two sides must be greater than the length of the third side.';
+      const message =
+        'In a triangle, the sum of any two sides must be greater than the third side.';
 
       throw new Error(message);
     }
