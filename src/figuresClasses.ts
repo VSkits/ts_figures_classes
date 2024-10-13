@@ -16,7 +16,9 @@ export class Triangle implements Figure {
     const sides = [a, b, c].sort((x, y) => x - y);
 
     if (sides[2] >= sides[0] + sides[1]) {
-      throw new Error('Sum of smaller sides must be greater then bigger side');
+      const message = 'In a triangle, the sum of lengths of any two sides must be greater than the length of the third side.';
+
+      throw new Error(message);
     }
   }
 
@@ -56,7 +58,7 @@ export class Rectangle implements Figure {
     public height: number,
   ) {
     if (width <= 0 || height <= 0) {
-      throw new Error('Sides must be greater then 0');
+      throw new Error('Sides must be positive numbers');
     }
   }
 
